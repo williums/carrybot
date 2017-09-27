@@ -22,13 +22,6 @@ fs.readdir('./commands/', (err, files) => {
   });
 });
 
-client.voiceConnection = null;
-client.playlist = {
-  queue: [],
-  nowPlaying: '',
-  stopped: false,
-};
-
 // Debug Events
 const regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('error', e => {
