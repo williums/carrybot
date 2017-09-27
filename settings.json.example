@@ -1,0 +1,6 @@
+{
+  "DISCORD":      [Your discord bot token],
+  "PREFIX":       [The prefix you'd like to use for this bot's commands. Default is '!'],
+  "SERVER":       [The name of the server that Carrybot is joining],
+  "TEXTCHANNEL":  [The name of the text channel that Carrybot listens to for commands],
+}
