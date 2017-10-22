@@ -6,6 +6,13 @@ const fs = require('fs');
 const moment = require('moment');
 require('./utils/eventLoader')(client);
 
+const init = () => {
+  client.parties = [];
+  client.server = null;
+  client.textChannel = null;
+  client.login(settings.DISCORD);
+}
+
 function log(message) {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 }
@@ -36,4 +43,8 @@ client.on('warn', e => {
 //   console.log(chalk.bgBlue(e.replace(regToken, '[redacted]')));
 // });
 
-client.login(settings.DISCORD);
+module.exports = {
+  client
+}
+
+init();
