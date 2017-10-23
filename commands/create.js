@@ -7,7 +7,7 @@ exports.run = function(client, message, args) {
   // check existing parties
   for (let p of client.parties) {
     if (p.leader == message.author) {
-      return message.channel.send(`User ${message.author} is already a leader of a party for <${p.boss}>`);
+      return message.channel.send(`User ${message.author} is already a leader of a party for boss <${p.boss}>`);
     }
   }
 
@@ -25,7 +25,7 @@ exports.run = function(client, message, args) {
 
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
-    .setTitle(party.boss)
+    .setTitle(`Boss: ${party.boss}`)
     .setDescription(`Comments: ${party.comments ? party.comments : 'None'}`)
     .addField('Members', party.members[0])
     .addField('Leader', party.leader)
