@@ -32,10 +32,11 @@ replacing YOUR_CLIENT_ID with the client ID you received from the previous link.
 Rename the file settings.json.example to settings.json with the correct information for your discord server. 
 
 ```
-"DISCORD":      [Your discord bot token]
-"PREFIX":       [The prefix you'd like to use for this bot's commands. Default is '!']
-"SERVER":       [The name of the server that KaraokeBot is joining]
-"TEXTCHANNEL":  [The name of the text channel that KaraokeBot listens to for commands]
+"DISCORD":        [Your discord bot token]
+"PREFIX":         [The prefix you'd like to use for this bot's commands. Default is '!']
+"SERVER":         [The name of the server that KaraokeBot is joining]
+"TEXTCHANNEL":    [The name of the text channel that KaraokeBot listens to for commands]
+"LEADERROLENAME": [The name of the role that leaders have. Only leaders can organize parties. Default is 'leader']
 ```
 
 That's it, you're good to go! Run `npm start` and carrybot should come online.

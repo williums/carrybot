@@ -30,6 +30,11 @@ exports.run = function(client, message, args) {
   return message.channel.send({embed});
 };
 
+exports.conf = {
+  enabled: true,
+  permLevel: 1
+};
+
 exports.help = {
   name: 'create',
   description: 'Create a new party as a leader. [bossName] must be a single word; additional arguments are treated as comments.',

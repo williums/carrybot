@@ -6,8 +6,14 @@ exports.run = function(client, message) {
     return message.channel.send(`Dissolved party for boss <${boss}>`);
   }
 
-  return message.channel.send(`User ${message.author} is not a party leader.`);
-} 
+  return message.channel.send(`You are not the leader of a party.`);
+}
+
+
+exports.conf = {
+  enabled: true,
+  permLevel: 1
+};
 
 exports.help = {
   name: 'dissolve',

@@ -16,6 +16,11 @@ exports.run = (client, message, args) => {
   }
 };
 
+exports.conf = {
+  enabled: true,
+  permLevel: 0
+};
+
 exports.help = {
   name: 'help',
   description: 'Displays all the available commands.',

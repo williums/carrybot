@@ -20,8 +20,13 @@ exports.run = function(client, message, args) {
     return message.channel.send(`User ${user} has been removed from ${message.author}'s party.`);
   }
 
-  return message.channel.send(`User ${message.author} is not a party leader.`);
+  return message.channel.send(`You are not the leader of a party.`);
 } 
+
+exports.conf = {
+  enabled: true,
+  permLevel: 1
+};
 
 exports.help = {
   name: 'kick',

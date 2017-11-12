@@ -15,6 +15,11 @@ exports.run = function(client, message) {
   return;
 }
 
+exports.conf = {
+  enabled: true,
+  permLevel: 0
+};
+
 exports.help = {
   name: 'list',
   description: 'Lists all current parties in the server.',

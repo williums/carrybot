@@ -29,6 +29,17 @@ fs.readdir('./commands/', (err, files) => {
   });
 });
 
+client.elevation = message => {
+  /* This function should resolve to an ELEVATION level which
+     is then sent to the command handler for verification*/
+  let permlvl = 0;
+  let leader_role = message.guild.roles.find('name', settings.LEADERROLENAME);
+  if (message.member.roles.has(leader_role.id)) permlvl = 1;
+  // if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
+  // if (message.author.id === settings.ownerid) permlvl = 4;
+  return permlvl;
+};
+
 // Debug Events
 const regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('error', e => {
