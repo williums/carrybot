@@ -2,14 +2,8 @@ const Discord = require('discord.js');
 
 exports.run = function(client, message, args) {
   
-  if (!args[0]) return message.reply(`Usage: ${exports.help.usage}`, {code:'asciidoc'});
-  
-  // check existing parties
-  // for (let p of client.parties) {
-  //   if (p.leader == message.author) {
-  //     return message.channel.send(`User ${message.author} is already a leader of a party for boss <${p.boss}>`);
-  //   }
-  // }
+  if (!args[0]) return message.reply(`Usage: ${exports.help.usage}`, {code:'asciidoc'});    
+
   if (client.parties.hasOwnProperty(message.author)) {
     return message.channel.send(`User ${message.author} is already a leader of a party for boss <${client.parties[message.author].boss}>`);
   }
@@ -38,6 +32,6 @@ exports.run = function(client, message, args) {
 
 exports.help = {
   name: 'create',
-  description: 'Create a new party with the user set as leader. The first argument is the target boss, and any additional arguments are treated as comments.',
-  usage: 'create [boss_name] [other comments]'
+  description: 'Create a new party as a leader. [bossName] must be a single word; additional arguments are treated as comments.',
+  usage: 'create [bossName] [other comments]'
 };

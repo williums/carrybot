@@ -17,6 +17,6 @@ exports.run = function(client, message) {
 
 exports.help = {
   name: 'list',
-  description: 'Lists all current stories in the server.',
+  description: 'Lists all current parties in the server.',
   usage: 'list'
 };
